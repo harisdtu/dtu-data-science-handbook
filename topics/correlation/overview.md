@@ -19,6 +19,8 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 ### Example (Pearson)
 ![PCC example](../../assets/PCC.png)
 
+![Spearman](../../assets/Spearman.png)
+
 ---
 
 ## Advanced dependence measures
