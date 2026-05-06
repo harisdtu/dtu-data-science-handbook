@@ -41,6 +41,8 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 - **Pros:** captures general dependence, simple interpretation, efficient  
 - **Cons:** does not describe relationship form, less common, noise-sensitive  
 
+![Xi](../../assets/Xi.png)
+
 ---
 
 ## Quick comparison
