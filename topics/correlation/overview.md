@@ -50,5 +50,5 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 ---
 
 ## Notebook (interactive example)
-📄 [notebooks/DS_correlations.ipynb](../../notebooks/DS_correlations.ipynb)
-▶️ https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb
+- 📄 [notebooks/DS_correlations.ipynb](../../notebooks/DS_correlations.ipynb)
+- ▶️ https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb
