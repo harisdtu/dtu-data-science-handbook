@@ -16,6 +16,9 @@ Correlation measures the **strength and direction of a relationship** between tw
 Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)  
 → **Low correlation ≠ independence**
 
+### Example (Pearson)
+![PCC example](../../assets/PCC.png)
+
 ---
 
 ## Advanced dependence measures
