@@ -5,91 +5,50 @@ Correlation measures the **strength and direction of a relationship** between tw
 
 ---
 
-# Classical Correlation Measures
-
-## Pearson Correlation
-- Measures **linear relationships**
-- Sensitive to outliers
-
-## Spearman Correlation
-- Rank-based
-- Captures **monotonic relationships**
-- More robust to outliers
-
-## Kendall Correlation
-- Rank-based
-- Suitable for **small datasets**
-- Robust to noise
+## Classical correlation measures
+- **Pearson** → linear relationships (sensitive to outliers)  
+- **Spearman** → rank-based, monotonic, more robust  
+- **Kendall** → rank-based, robust, suitable for small datasets  
 
 ---
 
 ## Key limitation
-Correlation measures can fail when relationships are **nonlinear and non-monotonic**.
+Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)  
+→ **Low correlation ≠ independence**
 
 ---
 
-# Advanced Dependence Measures
+## Advanced dependence measures
 
-## Maximal Information Coefficient (MIC)
-
-### What it is
-Measures dependence using **mutual information**, capturing both **linear and nonlinear relationships**.
-
-### Range
-MIC ∈ [0, 1]  
-- 0 → no relationship  
-- 1 → strong relationship
-
-### When to use
-- Detecting nonlinear relationships
-- Exploratory analysis
-- Feature selection
-
-### Advantages
-- Flexible (captures many relationship types)
-- Equitable across noise levels
-- No functional assumption
-
-### Limitations
-- Computationally expensive
-- Less interpretable
-- Sensitive to sample size
-- Not standard in workflows
+### Maximal Information Coefficient (MIC)
+- **Idea:** captures linear + nonlinear relationships via mutual information  
+- **Range:** [0, 1] (0 = none, 1 = strong)  
+- **Use:** nonlinear detection, EDA, feature selection  
+- **Pros:** flexible, no functional assumption, equitable  
+- **Cons:** expensive, less interpretable, sample-size sensitive  
 
 ---
 
-## Xi Correlation Coefficient (ξ)
+### Xi correlation (ξ)
+- **Idea:** measures general dependence via predictability of ordering  
+- **Range:** [0, 1] (0 = independent, 1 = dependent)  
+- **Use:** unknown / nonlinear relationships  
+- **Pros:** captures general dependence, simple interpretation, efficient  
+- **Cons:** does not describe relationship form, less common, noise-sensitive  
 
-### What it is
-Measures **general statistical dependence** by checking whether X provides information about Y.
+---
 
-### Key idea
-- Detects **any type of dependence**
-- Based on predictability of ordering
-
-### Range
-ξ ∈ [0, 1]  
-- 0 → independence  
-- 1 → strong dependence  
-
-### When to use
-- Unknown or nonlinear relationships
-- Exploratory analysis
-- When classical correlation fails
-
-### Advantages
-- Captures general dependence
-- Simple interpretation (0 = independent)
-- Efficient compared to MIC
-
-### Limitations
-- Does not describe relationship form
-- Less widely adopted
-- Can be sensitive in small samples
+## Quick comparison
+| Method | Captures |
+|--------|----------|
+| Pearson | Linear |
+| Spearman | Monotonic |
+| Kendall | Monotonic (robust) |
+| MIC | Nonlinear |
+| ξ | General dependence |
 
 ---
 
 ## Notebook (interactive example)
-
-- 📄 [View in repository](../../notebooks/DS_correlations.ipynb)  
-- ▶️ [Run in Google Colab](https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb)
+📄 [notebooks/DS_correlations.ipynb](../../notebooks/DS_correlations.ipynb)
+▶️ https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb
