@@ -23,30 +23,8 @@ Correlation measures the **strength and direction of a relationship** between tw
 
 ---
 
-## When to use (summary)
-
-| Situation | Method |
-|----------|--------|
-| Linear relationship | Pearson |
-| Monotonic (nonlinear) | Spearman |
-| Small / noisy data | Kendall |
-
----
-
-## When NOT to use
-- Non-monotonic relationships (e.g. U-shaped data)
-- Presence of strong outliers (for Pearson)
-- Interpreting correlation as causality
-
----
-
 ## Key limitation
 Correlation measures can fail when relationships are **nonlinear and non-monotonic**.
-
-### Example
-Temperature vs energy consumption often shows a **U-shape**:
-- Pearson → ≈ 0  
-- Misleading despite strong dependence  
 
 ---
 
@@ -56,11 +34,6 @@ Temperature vs energy consumption often shows a **U-shape**:
 
 ### What it is
 Measures dependence using **mutual information**, capturing both **linear and nonlinear relationships**.
-
-### Key idea
-- Pearson → linear  
-- Spearman → monotonic  
-- MIC → **any functional relationship**
 
 ### Range
 MIC ∈ [0, 1]  
@@ -113,25 +86,3 @@ Measures **general statistical dependence** by checking whether X provides infor
 - Does not describe relationship form
 - Less widely adopted
 - Can be sensitive in small samples
-
----
-
-# Practical Insight
-
-For **nonlinear relationships (e.g. U-shape)**:
-
-| Method | Output |
-|------|------|
-| Pearson | ≈ 0 |
-| Spearman | low |
-| MIC | high |
-| ξ | high |
-
-👉 Low Pearson ≠ independence
-
----
-
-# Related Concepts
-- Mutual Information
-- Distance Correlation
-- Maximal Correlation
