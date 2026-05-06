@@ -86,3 +86,10 @@ Measures **general statistical dependence** by checking whether X provides infor
 - Does not describe relationship form
 - Less widely adopted
 - Can be sensitive in small samples
+
+---
+
+## Notebook (interactive example)
+
+- 📄 [View in repository](../../notebooks/DS_correlations.ipynb)  
+- ▶️ [Run in Google Colab](https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb)
