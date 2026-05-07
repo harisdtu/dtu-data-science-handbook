@@ -112,5 +112,21 @@ No single dependence measure is universally optimal:
   Choose the metric based on the **underlying relationship**  
 
 - **Directionality (ξ):**  
-  Chatterjee’s coefficient measures how one variable predicts the ordering of another:  
+  Chatterjee’s coefficient measures how one variable predicts the ordering of another:
+  $ξ(X, Y) \neq ξ(Y, X)$
  
+---
+
+## Practical takeaway
+
+- Use **Pearson** → when linearity is expected  
+- Use **Spearman / Kendall** → for monotonic relationships  
+- Use **MIC / ξ** → for exploratory detection of complex dependence  
+
+→ Always match the method to the **data structure and goal of analysis**
+
+---
+
+## Notebook (interactive example)
+- 📄 ../../notebooks/DS_correlations.ipynb  
+- ▶️ https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb
