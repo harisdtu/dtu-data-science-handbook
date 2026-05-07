@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-- [Pearson Correlation](#pearson-correlation)
-- [Spearman Correlation](#spearman-correlation)
-- [Kendall Correlation](#kendall-correlation)
-- [Maximal Information Coefficient](#maximal-information-coefficient)
-- [Xi Coefficient](#xi-coefficient)
+- #pearson-correlation
+- #spearman-correlation
+- #kendall-correlation
+- #maximal-information-coefficient
+- #xi-coefficient
 
 ---
 
@@ -72,15 +72,15 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 
 ---
 
-### Xi Coefficient
-- **Idea:** measures dependence via predictability of ordering  
+### Chatterjee’s Xi Coefficient (ξ)
+- **Idea:** measures dependence via predictability of ordering (Chatterjee, 2021)  
 - **Range:** [0, 1]  
 - **Interpretation:**
-  - 0 → independence  
-  - 1 → strong dependence (not necessarily monotonic)  
+  - ξ = 0 → independence  
+  - ξ → 1 → strong dependence (not necessarily monotonic)  
 - **Use:** detecting general dependence when structure is unknown  
 - **Pros:** captures broad dependencies, simple scalar summary  
-- **Cons:** limited interpretability, sensitive to noise, directional  
+- **Cons:** limited interpretability, sensitive to noise, **directional**  
 
 ![Xi](../../assets/Xi.png)
 
@@ -94,7 +94,7 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 | Spearman | Monotonic                |
 | Kendall  | Monotonic (robust)       |
 | MIC      | Nonlinear                |
-| ξ        | General dependence       |
+| ξ (Chatterjee) | General dependence |
 
 ---
 
@@ -112,21 +112,5 @@ No single dependence measure is universally optimal:
   Choose the metric based on the **underlying relationship**  
 
 - **Directionality (ξ):**  
-  ξ measures how one variable predicts the ordering of another  
-  → not strictly symmetric  
-
----
-
-## Practical takeaway
-
-- Use **Pearson** → when linearity is expected  
-- Use **Spearman / Kendall** → for monotonic relationships  
-- Use **MIC / ξ** → for exploratory detection of complex dependence  
-
-→ Always match the method to the **data structure and goal of analysis**
-
----
-
-## Notebook (interactive example)
-- 📄 [Open notebook](../../notebooks/DS_correlations.ipynb)  
-- ▶️ https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb
+  Chatterjee’s coefficient measures how one variable predicts the ordering of another:  
+ 
