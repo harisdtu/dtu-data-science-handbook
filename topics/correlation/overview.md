@@ -128,5 +128,5 @@ No single dependence measure is universally optimal:
 ---
 
 ## Notebook (interactive example)
-- 📄 ../../notebooks/DS_correlations.ipynb  
+- 📄 [Open notebook](../../notebooks/DS_correlations.ipynb) 
 - ▶️ https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb
