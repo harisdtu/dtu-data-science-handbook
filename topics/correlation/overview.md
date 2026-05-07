@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-- #pearson-correlation
-- #spearman-correlation
-- #kendall-correlation
-- #maximal-information-coefficient
-- #xi-coefficient
+- [Pearson Correlation](#pearson-correlation)
+- [Spearman Correlation](#spearman-correlation)
+- [Kendall Correlation](#kendall-correlation)
+- [Maximal Information Coefficient](#maximal-information-coefficient)
+- [Xi Coefficient](#xi-coefficient)
 
 ---
 
