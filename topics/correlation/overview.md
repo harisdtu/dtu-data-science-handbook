@@ -1,5 +1,14 @@
 # Correlation Coefficients
 
+## Table of Contents
+
+- #pearson-correlation
+- #spearman-correlation
+- #kendall-correlation
+- #maximal-information-coefficient
+- #xi-coefficient
+
+
 ## What it is
 Correlation measures the **strength and direction of a relationship** between two variables.
 
