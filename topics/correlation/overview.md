@@ -2,12 +2,13 @@
 
 ## Table of Contents
 
-- #pearson-correlation
-- #spearman-correlation
-- #kendall-correlation
-- #maximal-information-coefficient
-- #xi-coefficient
+- [Pearson Correlation](#pearson-correlation)
+- [Spearman Correlation](#spearman-correlation)
+- [Kendall Correlation](#kendall-correlation)
+- [Maximal Information Coefficient](#maximal-information-coefficient)
+- [Xi Coefficient](#xi-coefficient)
 
+---
 
 ## What it is
 Correlation measures the **strength and direction of a relationship** between two variables.
@@ -15,9 +16,18 @@ Correlation measures the **strength and direction of a relationship** between tw
 ---
 
 ## Classical correlation measures
-- **Pearson** → linear relationships (sensitive to outliers)  
-- **Spearman** → rank-based, monotonic, more robust  
-- **Kendall** → rank-based, robust, suitable for small datasets  
+
+### Pearson Correlation
+- Linear relationships
+- Sensitive to outliers
+
+### Spearman Correlation
+- Rank-based, monotonic
+- More robust than Pearson
+
+### Kendall Correlation
+- Rank-based
+- More robust, suitable for small datasets
 
 ---
 
@@ -34,16 +44,14 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 
 ## Advanced dependence measures
 
-### Maximal Information Coefficient (MIC)
+### Maximal Information Coefficient
 - **Idea:** captures linear + nonlinear relationships via mutual information  
 - **Range:** [0, 1] (0 = none, 1 = strong)  
 - **Use:** nonlinear detection, EDA, feature selection  
 - **Pros:** flexible, no functional assumption, equitable  
 - **Cons:** expensive, less interpretable, sample-size sensitive  
 
----
-
-### Xi correlation (ξ)
+### Xi Coefficient
 - **Idea:** measures general dependence via predictability of ordering  
 - **Range:** [0, 1] (0 = independent, 1 = dependent)  
 - **Use:** unknown / nonlinear relationships  
@@ -55,16 +63,17 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 ---
 
 ## Quick comparison
-| Method | Captures |
-|--------|----------|
-| Pearson | Linear |
-| Spearman | Monotonic |
-| Kendall | Monotonic (robust) |
-| MIC | Nonlinear |
-| ξ | General dependence |
+
+| Method   | Captures                  |
+|----------|--------------------------|
+| Pearson  | Linear                   |
+| Spearman | Monotonic                |
+| Kendall  | Monotonic (robust)       |
+| MIC      | Nonlinear                |
+| ξ        | General dependence       |
 
 ---
 
 ## Notebook (interactive example)
-- 📄 [notebooks/DS_correlations.ipynb](../../notebooks/DS_correlations.ipynb)
+- 📄 [Open notebook](../../notebooks/DS_correlations.ipynb)  
 - ▶️ https://colab.research.google.com/github/harisdtu/dtu-data-science-handbook/blob/main/notebooks/DS_correlations.ipynb
