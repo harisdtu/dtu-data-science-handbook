@@ -18,16 +18,35 @@ Correlation measures the **strength and direction of a relationship** between tw
 ## Classical correlation measures
 
 ### Pearson Correlation
-- Linear relationships
-- Sensitive to outliers
+- **Idea:** measures linear dependence using covariance
+- **Range:** [-1, 1]
+- **Interpretation:**
+  - 1 → perfect positive linear
+  - 0 → no linear relationship
+  - -1 → perfect negative linear
+- **Use:** linear models, normally distributed data  
+- **Pros:** simple, interpretable, widely used  
+- **Cons:** sensitive to outliers, fails for nonlinear patterns  
+
+---
 
 ### Spearman Correlation
-- Rank-based, monotonic
-- More robust than Pearson
+- **Idea:** Pearson correlation applied to ranked data
+- **Range:** [-1, 1]
+- **Interpretation:** measures strength of **monotonic relationships**
+- **Use:** nonlinear but monotonic relationships  
+- **Pros:** robust to outliers, captures monotonicity  
+- **Cons:** ignores exact functional form  
+
+---
 
 ### Kendall Correlation
-- Rank-based
-- More robust, suitable for small datasets
+- **Idea:** compares concordant vs discordant pairs
+- **Range:** [-1, 1]
+- **Interpretation:** probability of agreement in ordering  
+- **Use:** small datasets, ordinal data  
+- **Pros:** robust, statistically well-grounded  
+- **Cons:** lower power for large datasets  
 
 ---
 
@@ -35,9 +54,8 @@ Correlation measures the **strength and direction of a relationship** between tw
 Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)  
 → **Low correlation ≠ independence**
 
-### Example (Pearson)
+### Example (Pearson vs Spearman)
 ![PCC example](../../assets/PCC.png)
-
 ![Spearman](../../assets/Spearman.png)
 
 ---
@@ -45,18 +63,24 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 ## Advanced dependence measures
 
 ### Maximal Information Coefficient
-- **Idea:** captures linear + nonlinear relationships via mutual information  
-- **Range:** [0, 1] (0 = none, 1 = strong)  
-- **Use:** nonlinear detection, EDA, feature selection  
-- **Pros:** flexible, no functional assumption, equitable  
-- **Cons:** expensive, less interpretable, sample-size sensitive  
+- **Idea:** detects relationships via mutual information maximization  
+- **Range:** [0, 1]  
+- **Interpretation:** higher values → stronger (possibly nonlinear) dependence  
+- **Use:** exploratory data analysis, feature discovery  
+- **Pros:** captures wide range of relationships  
+- **Cons:** computationally expensive, less interpretable, sample-size sensitive  
+
+---
 
 ### Xi Coefficient
-- **Idea:** measures general dependence via predictability of ordering  
-- **Range:** [0, 1] (0 = independent, 1 = dependent)  
-- **Use:** unknown / nonlinear relationships  
-- **Pros:** captures general dependence, simple interpretation, efficient  
-- **Cons:** does not describe relationship form, less common, noise-sensitive  
+- **Idea:** measures dependence via predictability of ordering  
+- **Range:** [0, 1]  
+- **Interpretation:**
+  - 0 → independence  
+  - 1 → strong dependence (not necessarily monotonic)  
+- **Use:** detecting general dependence when structure is unknown  
+- **Pros:** captures broad dependencies, simple scalar summary  
+- **Cons:** limited interpretability, sensitive to noise, directional  
 
 ![Xi](../../assets/Xi.png)
 
@@ -64,13 +88,42 @@ Correlation fails for **nonlinear, non-monotonic relationships** (e.g. U-shape)
 
 ## Quick comparison
 
-| Method   | Captures                  |
+| Method   | Captures                 |
 |----------|--------------------------|
 | Pearson  | Linear                   |
 | Spearman | Monotonic                |
 | Kendall  | Monotonic (robust)       |
 | MIC      | Nonlinear                |
 | ξ        | General dependence       |
+
+---
+
+## Limitations and considerations
+
+No single dependence measure is universally optimal:
+
+- **Interpretability trade-off:**  
+  Advanced methods (MIC, ξ) detect more patterns but explain less about *how* variables relate  
+
+- **Noise sensitivity:**  
+  All measures degrade with noisy or small datasets  
+
+- **Model alignment:**  
+  Choose the metric based on the **underlying relationship**  
+
+- **Directionality (ξ):**  
+  ξ measures how one variable predicts the ordering of another  
+  → not strictly symmetric  
+
+---
+
+## Practical takeaway
+
+- Use **Pearson** → when linearity is expected  
+- Use **Spearman / Kendall** → for monotonic relationships  
+- Use **MIC / ξ** → for exploratory detection of complex dependence  
+
+→ Always match the method to the **data structure and goal of analysis**
 
 ---
 
